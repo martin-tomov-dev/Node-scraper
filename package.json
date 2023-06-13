@@ -17,13 +17,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "cheerio": "^1.0.0-rc.12",
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "express": "^4.17.1",
-    "moment": "^2.29.4",
-    "moment-timezone": "^0.5.43",
-    "puppeteer": "^20.7.1",
-    "tedious": "^15.1.2"
+    "cors": "^2.8.5"
   },
   "engines": {
     "node": ">=10"
