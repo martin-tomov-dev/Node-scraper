@@ -4,40 +4,41 @@
 // ***************************************************************************
 
 const express = require("express");
-const bodyParser = require("body-parser");
-const cors = require("cors");
-const crypto = require("crypto");
-const pkg = require("./package.json");
+const scraper = require("./scrapers/scraper");
+// const bodyParser = require("body-parser");
+// const cors = require("cors");
+// const crypto = require("crypto");
+// const pkg = require("./package.json");
 
 // App constants
 const port = process.env.PORT || 3000;
-const apiPrefix = "/api";
+// const apiPrefix = "/api";
 
 // Store data in-memory, not suited for production use!
-const db = {
-  test: {
-    user: "test",
-    currency: "$",
-    description: `Test account`,
-    balance: 75,
-    transactions: [
-      { id: "1", date: "2020-10-01", object: "Pocket money", amount: 50 },
-      { id: "2", date: "2020-10-03", object: "Book", amount: -10 },
-      { id: "3", date: "2020-10-04", object: "Sandwich", amount: -5 },
-    ],
-  },
-  jondoe: {
-    user: "jondoe",
-    currency: "$",
-    description: `Second test account`,
-    balance: 150,
-    transactions: [
-      { id: "1", date: "2022-10-01", object: "Gum", amount: -2 },
-      { id: "2", date: "2022-10-03", object: "Book", amount: -10 },
-      { id: "3", date: "2022-10-04", object: "Restaurant", amount: -45 },
-    ],
-  },
-};
+// const db = {
+//   test: {
+//     user: "test",
+//     currency: "$",
+//     description: `Test account`,
+//     balance: 75,
+//     transactions: [
+//       { id: "1", date: "2020-10-01", object: "Pocket money", amount: 50 },
+//       { id: "2", date: "2020-10-03", object: "Book", amount: -10 },
+//       { id: "3", date: "2020-10-04", object: "Sandwich", amount: -5 },
+//     ],
+//   },
+//   jondoe: {
+//     user: "jondoe",
+//     currency: "$",
+//     description: `Second test account`,
+//     balance: 150,
+//     transactions: [
+//       { id: "1", date: "2022-10-01", object: "Gum", amount: -2 },
+//       { id: "2", date: "2022-10-03", object: "Book", amount: -10 },
+//       { id: "3", date: "2022-10-04", object: "Restaurant", amount: -45 },
+//     ],
+//   },
+// };
 
 // Create the Express app & setup middlewares
 const app = express();
@@ -212,5 +213,8 @@ const app = express();
 
 // Start the server
 app.listen(port, () => {
+  var random_number = Math.floor(Math.random() * 3) + 1;
+  console.log(random_number);
+  scraper(random_number);
   console.log(`Server listening on port ${port}`);
 });
