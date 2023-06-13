@@ -1,0 +1,45 @@
+{
+  "name": "google-reviews-web-scraper",
+  "version": "1.0.2",
+  "description": "Retrieves google reviews through a web scraper and returns it as a json array",
+  "main": "getReviews.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "serve": "node src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Benoît ARNOULT",
+    "email": "benoit.arnlt@gmail.com",
+    "url": "https://www.benoit-arnoult.xyz/en"
+  },
+  "contributors": [
+    "Benoît ARNOULT <benoit.arnlt@gmail.com> (https://www.benoit-arnoult.xyz/en)"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moment": "^2.29.4",
+    "moment-timezone": "^0.5.43",
+    "dotenv": "^16.0.3",
+    "cheerio": "^1.0.0-rc.12",
+    "tedious": "^15.1.2",
+    "puppeteer": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PiiXelx64/node-google-reviews-web-scraper.git"
+  },
+  "keywords": [
+    "gmaps",
+    "web scraping",
+    "google maps",
+    "google maps reviews",
+    "express",
+    "async",
+    "puppeteer"
+  ]
+}
