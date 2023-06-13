@@ -9,7 +9,7 @@ async function main() {
 const express = require("express");
 
 // App constants
-const port = process.env.PORT || 3000;
+const port = 3001;
 const app = express();
 
 // Start the server
