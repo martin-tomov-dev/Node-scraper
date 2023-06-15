@@ -33,6 +33,7 @@
     "moment": "^2.29.4",
     "moment-timezone": "^0.5.43",
     "morgan": "^1.10.0",
+    "mssql": "^9.1.1",
     "multer": "^1.4.5-lts.1",
     "node-cron": "^3.0.2",
     "node-mailjet": "^6.0.2",
